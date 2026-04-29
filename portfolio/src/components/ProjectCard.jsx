@@ -1,5 +1,18 @@
 import { useState } from "react";
 
+const stackIcons = {
+  REACT: "https://cdn.simpleicons.org/react",
+  REACTJS: "https://cdn.simpleicons.org/react",
+  TYPESCRIPT: "https://cdn.simpleicons.org/typescript",
+  FASTAPI: "https://cdn.simpleicons.org/fastapi",
+  SOLIDITY: "https://cdn.simpleicons.org/solidity",
+  POLKADOT: "https://cdn.simpleicons.org/polkadot",
+  KOTLIN: "https://cdn.simpleicons.org/kotlin",
+  PYTHON: "https://cdn.simpleicons.org/python",
+  JAVA: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+  SQL: "https://cdn.simpleicons.org/mysql",
+};
+
 export default function ProjectCard({ ref_id, title, description, tags, image, githubUrl, liveUrl }) {
   const images = Array.isArray(image) ? image : [image];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,15 +53,18 @@ export default function ProjectCard({ ref_id, title, description, tags, image, g
           {/* Swappable Area */}
           <div className="relative flex-grow flex flex-col mb-6">
             {/* Text Content */}
-            <div className="flex flex-col flex-grow opacity-100 group-hover:opacity-0">
+            <div className="flex flex-col flex-grow opacity-100 group-hover:opacity-0 transition-all duration-300">
               <p className="font-body text-base text-on-background/70 mb-6 leading-relaxed max-w-prose text-justify">
                 {description}
               </p>
 
               {/* Stack Group (Pushed to bottom of swappable area) */}
-              <div className="mt-auto flex flex-wrap gap-4">
+              <div className="mt-auto flex flex-wrap gap-3">
                 {tags.map(tag => (
-                  <span key={tag} className="font-label text-[0.75rem] border border-on-background px-3 py-1 text-on-background">
+                  <span key={tag} className="font-label text-[0.75rem] border border-on-background/20 bg-surface-high px-3 py-1.5 text-on-background flex items-center gap-2 rounded-sm">
+                    {stackIcons[tag.toUpperCase()] && (
+                      <img src={stackIcons[tag.toUpperCase()]} alt={tag} className="w-3.5 h-3.5 object-contain" />
+                    )}
                     {tag}
                   </span>
                 ))}
@@ -56,13 +72,13 @@ export default function ProjectCard({ ref_id, title, description, tags, image, g
             </div>
 
             {/* Hover Image (Absolutely positioned over text only) */}
-            <div className="absolute -inset-x-2 -top-2 -bottom-4 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto z-10 flex flex-col">
+            <div className="absolute -inset-x-2 -top-2 -bottom-4 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto z-10 flex flex-col transition-all duration-300">
               <div className="w-full h-full relative overflow-hidden bg-surface rounded-sm">
                 <img
                   src={images[currentIndex]}
                   alt={title}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-500"
                 />
                 
                 {/* Carousel Controls */}
@@ -179,7 +195,10 @@ export default function ProjectCard({ ref_id, title, description, tags, image, g
               
               <div className="flex flex-wrap gap-3 mb-8">
                 {tags.map(tag => (
-                  <span key={tag} className="font-label text-[0.75rem] border border-primary/30 bg-primary/5 px-4 py-1.5 text-primary">
+                  <span key={tag} className="font-label text-[0.75rem] border border-primary/30 bg-primary/5 px-4 py-1.5 text-primary flex items-center gap-2 rounded-sm">
+                    {stackIcons[tag.toUpperCase()] && (
+                      <img src={stackIcons[tag.toUpperCase()]} alt={tag} className="w-3.5 h-3.5 object-contain" />
+                    )}
                     {tag}
                   </span>
                 ))}

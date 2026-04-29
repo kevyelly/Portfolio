@@ -7,7 +7,7 @@ export default function TechStackSection() {
         { name: "C", icon: "https://cdn.simpleicons.org/c" },
         { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus" },
         { name: ".NET", icon: "https://cdn.simpleicons.org/dotnet" },
-        { name: "Java", icon: "https://cdn.simpleicons.org/openjdk" },
+        { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
         { name: "Kotlin", icon: "https://cdn.simpleicons.org/kotlin" },
         { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
         { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql" },
@@ -20,8 +20,8 @@ export default function TechStackSection() {
         { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript" },
         { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
         { name: "React", icon: "https://cdn.simpleicons.org/react" },
-        { name: "React Native", icon: "https://cdn.simpleicons.org/expo" },
-        { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs" },
+        { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+        { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
         { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" }
       ]
     },
@@ -29,7 +29,7 @@ export default function TechStackSection() {
       title: "Architecture / DevOps",
       skills: [
         { name: "Docker", icon: "https://cdn.simpleicons.org/docker" },
-        { name: "AWS", icon: "https://cdn.simpleicons.org/amazonaws" },
+        { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
         { name: "Linux", icon: "https://cdn.simpleicons.org/linux" },
         { name: "Git", icon: "https://cdn.simpleicons.org/git" }
       ]
