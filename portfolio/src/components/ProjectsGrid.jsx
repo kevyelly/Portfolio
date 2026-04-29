@@ -55,8 +55,11 @@ export default function ProjectsGrid() {
           title="ExcelOne"
           description="ExcelOne is a skill-sharing software that enables learners and teachers to collaborate. Inspired by Fiverr, it allows experts to provide tailored tutoring services to students based on their subject of expertise."
           tags={['JAVA', 'SQL']}
-          image="https://lh3.googleusercontent.com/aida-public/AB6AXuDNYrUJTxk3YybcCHWHuSL9M_8c4w46Nl5mHMgPMD99PNuHsWJC3-W6N70h_lxJ-KqUWSzq1oLrsidbJDatIAE97wZietUM4wiTO74wcy2Konz8771xy-wDguqT9YwLHQTQy47decX_UHuq25f1JiZ-PdyZ3I9RFvcZj2rT-v9NLA6st8fzRpJQjoeA-ThLVIernSFKd2kthlIW1Fi-su_FI8RHPW0rKr6bCH8HPDIxaQHNFQ5kUBp1V302poYfickrUcfNqaoJQ96m"
-          githubUrl="#"
+          image={[
+            "https://i.imgur.com/hD6wp6L.png",
+            "https://i.imgur.com/Y3gsJQV.png"
+          ]}
+          githubUrl="https://github.com/IgnisFrostburn/OOP-Capstone.git"
           liveUrl="#"
         />
       </div>
