@@ -79,7 +79,7 @@ export default function TechStackSection() {
                     <img
                       src={skill.icon}
                       alt={`${skill.name} logo`}
-                      className="w-6 h-6 object-contain grayscale opacity-70 group-hover/skill:grayscale-0 group-hover/skill:opacity-100 shrink-0"
+                      className="w-6 h-6 object-contain shrink-0"
                     />
                     <span className="font-headline text-lg md:text-xl uppercase tracking-wider text-on-background group-hover/skill:text-primary truncate">
                       {skill.name}
