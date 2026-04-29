@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 export default function CTASection() {
   const contactLinks = [
     { name: "Email", value: "bebedorkarolvincent@gmail.com", href: "mailto:bebedorkarolvincent@gmail.com" },
@@ -13,29 +11,20 @@ export default function CTASection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* Header Area */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-        >
+        <div>
           <h2 className="text-5xl md:text-7xl font-headline leading-[0.9] mb-8 tracking-tighter text-on-background uppercase">
             Let's <br /><span className="text-primary">Connect.</span>
           </h2>
           <p className="font-body text-lg text-on-background/70 leading-relaxed max-w-md text-justify">
             Currently open for active internships where I am able to take part in building and developing software. I am a quick learner and I am able to pick up new technologies quickly. I am also a team player and I am able to work well with others.
           </p>
-        </motion.div>
+        </div>
 
         {/* Links Area */}
         <div className="flex flex-col space-y-10 lg:mt-0">
           {contactLinks.map((link, index) => (
-            <motion.div
+            <div
               key={link.name}
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group flex flex-col"
             >
               <div className="flex items-center gap-3 mb-2">
@@ -50,7 +39,7 @@ export default function CTASection() {
               >
                 {link.value}
               </a>
-            </motion.div>
+            </div>
           ))}
         </div>
 

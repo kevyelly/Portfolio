@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 export default function TechStackSection() {
   const stackCategories = [
     {
@@ -51,34 +49,25 @@ export default function TechStackSection() {
 
         {/* Title Area */}
         <div className="mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <h2 className="text-2xl font-headline uppercase tracking-widest text-on-background">
               Skills
             </h2>
-          </motion.div>
+          </div>
         </div>
 
         {/* Categories & Certifications Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-16">
           {stackCategories.map((category, index) => (
-            <motion.div
+            <div
               key={category.title}
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
               className="flex flex-col group"
             >
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="font-label text-xs uppercase tracking-[0.2em] text-on-background/50">
                   {category.title}
                 </h3>
-                <div className="h-[1px] flex-grow bg-on-background/10 transition-colors duration-500 group-hover:bg-primary/30"></div>
+                <div className="h-[1px] flex-grow bg-on-background/10 group-hover:bg-primary/30"></div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
@@ -90,36 +79,32 @@ export default function TechStackSection() {
                     <img
                       src={skill.icon}
                       alt={`${skill.name} logo`}
-                      className="w-6 h-6 object-contain grayscale opacity-70 group-hover/skill:grayscale-0 group-hover/skill:opacity-100 transition-all duration-300 shrink-0"
+                      className="w-6 h-6 object-contain grayscale opacity-70 group-hover/skill:grayscale-0 group-hover/skill:opacity-100 shrink-0"
                     />
-                    <span className="font-headline text-lg md:text-xl uppercase tracking-wider text-on-background group-hover/skill:text-primary transition-colors duration-300 truncate">
+                    <span className="font-headline text-lg md:text-xl uppercase tracking-wider text-on-background group-hover/skill:text-primary truncate">
                       {skill.name}
                     </span>
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
 
           {/* Certifications */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          <div
             className="flex flex-col group"
           >
             <div className="flex items-center gap-4 mb-6">
               <h3 className="font-label text-xs uppercase tracking-[0.2em] text-on-background/50">
                 Honors & Certifications
               </h3>
-              <div className="h-[1px] flex-grow bg-on-background/10 transition-colors duration-500 group-hover:bg-primary/30"></div>
+              <div className="h-[1px] flex-grow bg-on-background/10 group-hover:bg-primary/30"></div>
             </div>
 
             <div className="flex flex-col gap-y-4">
               {honors.map((cert) => (
                 <div key={cert.name} className="flex flex-col group/cert cursor-default">
-                  <span className="font-headline text-base md:text-lg uppercase tracking-wide text-on-background group-hover/cert:text-primary transition-colors duration-300">
+                  <span className="font-headline text-base md:text-lg uppercase tracking-wide text-on-background group-hover/cert:text-primary">
                     {cert.name}
                   </span>
                   <div className="flex items-center gap-2 mt-1">
@@ -134,7 +119,7 @@ export default function TechStackSection() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
 
       </div>
