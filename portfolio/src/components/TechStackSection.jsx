@@ -6,11 +6,14 @@ export default function TechStackSection() {
       title: "Core Systems / Backend",
       skills: [
         { name: "Python", icon: "https://cdn.simpleicons.org/python" },
-        { name: "Go", icon: "https://cdn.simpleicons.org/go" },
-        { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+        { name: "C", icon: "https://cdn.simpleicons.org/c" },
+        { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus" },
+        { name: ".NET", icon: "https://cdn.simpleicons.org/dotnet" },
         { name: "Java", icon: "https://cdn.simpleicons.org/openjdk" },
+        { name: "Kotlin", icon: "https://cdn.simpleicons.org/kotlin" },
+        { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
         { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql" },
-        { name: "Redis", icon: "https://cdn.simpleicons.org/redis" }
+        { name: "Supabase", icon: "https://cdn.simpleicons.org/supabase" },
       ]
     },
     {
@@ -19,16 +22,15 @@ export default function TechStackSection() {
         { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript" },
         { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
         { name: "React", icon: "https://cdn.simpleicons.org/react" },
+        { name: "React Native", icon: "https://cdn.simpleicons.org/expo" },
         { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs" },
-        { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
-        { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer" }
+        { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" }
       ]
     },
     {
       title: "Architecture / DevOps",
       skills: [
         { name: "Docker", icon: "https://cdn.simpleicons.org/docker" },
-        { name: "Kubernetes", icon: "https://cdn.simpleicons.org/kubernetes" },
         { name: "AWS", icon: "https://cdn.simpleicons.org/amazonaws" },
         { name: "Linux", icon: "https://cdn.simpleicons.org/linux" },
         { name: "Git", icon: "https://cdn.simpleicons.org/git" }
@@ -36,10 +38,11 @@ export default function TechStackSection() {
     }
   ];
 
-  const certifications = [
-    { name: "AWS Certified Solutions Architect", issuer: "Amazon Web Services", year: "2025" },
-    { name: "Certified Kubernetes Administrator", issuer: "Cloud Native Computing Foundation", year: "2024" },
-    { name: "Cisco Certified Network Associate (CCNA)", issuer: "Cisco", year: "2023" },
+  const honors = [
+    { name: "Polkadot 2026 Hackathon - Cebu Edition Champion", issuer: "Polkadot Ecosystem", year: "2026" },
+    { name: "Devcon Kids Cebu Chapter Volunteer", issuer: "Devcon Philippines", year: "2026 - Present" },
+    { name: "CodeChum Java & C Proficiency Certifications", issuer: "CodeChum", year: "2024 - 2025" },
+    { name: "DOST SEI Scholar", issuer: "Department of Science and Technology", year: "2023 - Present" },
   ];
 
   return (
@@ -108,13 +111,13 @@ export default function TechStackSection() {
           >
             <div className="flex items-center gap-4 mb-6">
               <h3 className="font-label text-xs uppercase tracking-[0.2em] text-on-background/50">
-                Certifications
+                Honors & Certifications
               </h3>
               <div className="h-[1px] flex-grow bg-on-background/10 transition-colors duration-500 group-hover:bg-primary/30"></div>
             </div>
 
             <div className="flex flex-col gap-y-4">
-              {certifications.map((cert) => (
+              {honors.map((cert) => (
                 <div key={cert.name} className="flex flex-col group/cert cursor-default">
                   <span className="font-headline text-base md:text-lg uppercase tracking-wide text-on-background group-hover/cert:text-primary transition-colors duration-300">
                     {cert.name}

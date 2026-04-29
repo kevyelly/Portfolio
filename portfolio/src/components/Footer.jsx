@@ -18,13 +18,6 @@ export default function Footer() {
         <div className="text-on-background font-bold font-headline text-xl mb-2">KAROL VINCENT</div>
         <p className="font-label text-[0.75rem] uppercase tracking-tighter opacity-50 text-on-background">© 2026 KAROL VINCENT</p>
       </div>
-      <div className="flex gap-12 font-label text-[0.75rem] uppercase tracking-tighter">
-        {['GITHUB', 'LINKEDIN', 'TWITTER'].map(social => (
-          <a key={social} className="text-on-background hover:underline decoration-primary decoration-2 active:opacity-80" href="#">
-            {social}
-          </a>
-        ))}
-      </div>
       <div className="hidden md:block font-label text-[0.75rem] text-primary">
         SYSTEM_TIME: {systemTime}
       </div>
